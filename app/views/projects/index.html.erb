@@ -8,6 +8,7 @@
       <tr>
         <th>Project Name</th>
         <th>Description</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody id="projects">
@@ -28,8 +29,13 @@
  <%= link_to "New Project", new_project_path, class:"btn btn-primary" %>
 <% else %>
 
-<h1>Hello</h1>
-This is my second bascamp prototype
+<div class="image-container">
+  <%= image_tag 'basecamp.png', alt: 'Basecamp Prototype', class: 'floaty-image' %>
+  <h1> WELCOME !!</h1>
+  <h3> Please move to the signup page to begin or sigin to continue </h3>
+</div>
+
+
 
 
 <% end %>

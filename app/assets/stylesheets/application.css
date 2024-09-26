@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+ .image-container {
+    text-align: center; /* Center the image */
+    position: relative; /* Create a positioning context for the floating effect */
+}
+
+.floaty-image {
+    width: 300px; /* Set your desired width */
+    height: auto; /* Maintain aspect ratio */
+    position: relative; /* Allow movement */
+    animation: float 3s ease-in-out infinite; /* Floating animation */
+}
+
+/* Floating effect using keyframes */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); /* Start and end position */
+    }
+    50% {
+        transform: translateY(-15px); /* Move up */
+    }
+}
+

@@ -25,6 +25,12 @@
         <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link"%>
        </li>
 
+       <% if current_user == User.first %> 
+          <li class="nav-item"> 
+          <%= link_to 'Manage Users', users_path, class: 'nav-link' %> 
+          </li> 
+       <% end %>  
+
       <% else %>
       
        <li class="nav-item">

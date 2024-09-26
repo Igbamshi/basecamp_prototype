@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
+  get "users/index"
   devise_for :users
   resources :projects
+  resources :users do
+    member do
+      post 'make_admin'
+      post 'remove_admin'
+    end
+  end
   # get "home/index"
   get "home/about"
   #root 'home#index'
