@@ -36,7 +36,7 @@ class User < ApplicationRecord
   private
 
   def assign_admin_role_if_first
-    if user.count == 1
+    if User.count == 1
         update(role: 'admin')
     end
   end
